@@ -31,7 +31,7 @@ describe('Engineer', () => {
 
         it('should return the correct role. ', () => {
         //Arrange
-        const testEngineer = new Engineer('HarleyQ','HarleyQ@github.com');
+        const testEngineer = new Engineer('Harley Quinn', 1, 'HarleyQ123@gmail.com', 'HarleyQ');
         //Act
         const role = testEngineer.getRole()
         //Assert
