@@ -20,22 +20,22 @@ describe('Employee', () => {
 
     describe('getName', () => {
         
-        it('should return the correct name. ', () => {
+        it('should accurately return the name. ', () => {
             //Arrange
-            const testEmployee = new Employee('Harley Quinn', 1, 'HarleyQ123@gmail.com');
+            let testEmployee = new Employee('Harley Quinn', 1, 'HarleyQ123@gmail.com');
             //Act
-            const name = testEmployee.getName()
+            let name = testEmployee.getName()
             //Assert
             expect(name).toBe('Harley Quinn');
         });
     });
     describe('getId', () => {
         
-        it('should return the correct id. ', () => {
+        it('should accurately return the id. ', () => {
             //Arrange
-            const testEmployee = new Employee('Harley Quinn', 1, 'HarleyQ123@gmail.com');
+            let testEmployee = new Employee('Harley Quinn', 1, 'HarleyQ123@gmail.com');
             //Act
-            const id = testEmployee.getId()
+            let id = testEmployee.getId()
             //Assert
             expect(id).toEqual(1);
         });
@@ -43,11 +43,11 @@ describe('Employee', () => {
 
     describe('getEmail', () => {
 
-        it('should return the correct email. ', () => {
+        it('should accurately return the email. ', () => {
         //Arrange
-        const testEmployee = new Employee('Harley Quinn', 1, 'HarleyQ123@gmail.com');
+        let testEmployee = new Employee('Harley Quinn', 1, 'HarleyQ123@gmail.com');
         //Act
-        const email = testEmployee.getEmail()
+        let email = testEmployee.getEmail()
         //Assert
         expect(email).toBe('HarleyQ123@gmail.com');
         });
@@ -57,9 +57,9 @@ describe('Employee', () => {
 
         it('should return the correct role. ', () => {
         //Arrange
-        const testEmployee = new Employee('Harley Quinn', 1, 'HarleyQ123@gmail.com');
+        let testEmployee = new Employee('Harley Quinn', 1, 'HarleyQ123@gmail.com');
         //Act
-        const role = testEmployee.getRole()
+        let role = testEmployee.getRole()
         //Assert
         expect(role).toBe('Employee');
         });

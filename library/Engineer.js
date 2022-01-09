@@ -8,15 +8,15 @@ class Engineer extends Employee {
     
     // * `getRole()`&mdash;overridden to return `'Engineer'`
 
-    constructor(name, id, email, Github){
-       super(name, id, email)
+    constructor(name, id, email, github){
+       super(name, id, email, github)
 
-       this.Github = Github;
+       this.github = github;
 
     }
 
     getGithub(){
-        return this.Github;
+        return this.github;
     }
 
     getRole(){
