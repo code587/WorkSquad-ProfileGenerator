@@ -1,26 +1,17 @@
 // generates information for the TeamProfile
 
-function renderEmployeeType(employee) {
-  let chosenEE = employee
-  if (chosenEE === 'Manager') {
-    for (let i = 0; i < questions.length; i [1, 2, 3]);
-  }
-  else {
-    for (let i = 0; i < questions.length; i [0]);
-  }
-  // else if (chosenLicense === "MIT") {
-  //   licenseBadge = "![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet)"
-  // }
-  // else if(chosenLicense === "BSD") {
-  //   licenseBadge = "![License: BSD](https://img.shields.io/badge/License-BSD-blue)"
-  // }
-  // // else if(chosenLicense === "None") {
-  // // licenseBadge = " "
-  // // }
+// function renderEmployeeType(employee) {
+//   let chosenEE = employee
+//   if (chosenEE === 'Manager') {
+//     for (let i = 0; i < questions.length; i [1, 2, 3, 4]);
+//   }
+//   else {
+//     for (let i = 0; i < questions.length; i [0]);
+//   }
   
-  console.log(employee);
-  return chosenEE;
-}
+//   console.log(employee);
+//   return chosenEE;
+// }
 
 function generateProfile(data) {
   console.log("USER ANSWERS FROM INDEX.js", data)

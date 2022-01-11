@@ -2,8 +2,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require("path");
 const generateProfile = require('./src/generateProfile');
-// const { listenerCount } = require('process');
-// const { addAbortSignal } = require('stream');
 
 // Questions for user input
 const questions = () => {
@@ -17,7 +15,7 @@ const questions = () => {
     },
     {
         type: 'input',
-        name: 'managerName',
+        name: 'name',
         message: 'What is the name of the team manager?',
     },
     {
@@ -32,7 +30,7 @@ const questions = () => {
     },
     {
         type: 'input',
-        name: 'officeNumber',
+        num: 'officeNumber',
         message: 'What is the manager office number?',
     },
 // //     {
