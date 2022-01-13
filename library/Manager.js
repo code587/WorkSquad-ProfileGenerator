@@ -1,4 +1,4 @@
-const Employee = require('../library/Employee');
+const Employee = require("./Employee")
 
 class Manager extends Employee {
 
@@ -7,6 +7,10 @@ class Manager extends Employee {
  
         this.officeNumber = officeNumber;
        
+     }
+
+     getOfficeNumber(){
+         return this.officeNumber;
      }
  
      getRole(){
