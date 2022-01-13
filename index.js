@@ -2,6 +2,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require("path");
 const Manager = require('./library/Manager');
+const Engineer = require('./library/Engineer');
+const Intern = require('./library/Intern');
 
 const teamArray = [];
 
@@ -47,54 +49,76 @@ const managerQuestions = () => {
    // console.log("this is whats in our team array", teamArray)
 })
 }
-
-    // {
-    //     type: 'input',
-    //     name: 'engineerName',
-    //     message: 'What is the name of the Engineer?'
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'engineerId',
-    //     message: 'What is the Engineer ID number?',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'engineerEmail',
-    //     message: 'what is the email address for the Engineer?',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'engineerGithub',
-    //     message: 'Provide the github username for the Engineer.',
-    // },
-    // {
-    //     type: 'list',
-    //     name: 'Intern',
-    //     message: 'Which personnel role would you like to add?',
-    //     choices: ['Manager', 'Engineer', 'Intern']
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'InternName',
-    //     message: 'What is the name of the Intern?'
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'internId',
-    //     message: 'What is the Intern ID number?',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'internEmail',
-    //     message: 'what is the email address of the Intern?',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'internSchool',
-    //     message: 'Provide the school attended by the Intern.',
-    // },
-
+const engineerQuestions = () => {
+    return inquirer.prompt([
+    {
+        type: 'input',
+        name: 'name',
+        message: 'What is the name of the Engineer?'
+    },
+    {
+        type: 'input',
+        name: 'engineerId',
+        message: 'What is the Engineer ID number?',
+    },
+    {
+        type: 'input',
+        name: 'engineerEmail',
+        message: 'what is the email address for the Engineer?',
+    },
+    {
+        type: 'input',
+        name: 'engineerGithub',
+        message: 'Provide the github username for the Engineer.',
+    },
+]).then((answers)=>{
+    const engineer = new Engineer(
+        answers.name,
+        answers.engineerId,
+        answers.engineerEmail,
+        answers.engineerGithub
+    )
+    teamArray.push(engineer);
+    createTeam();
+  //  console.log("new instance of manager", manager)
+   // console.log("this is whats in our team array", teamArray)
+})
+}
+const internQuestions = () => {
+    return inquirer.prompt([
+    {
+        type: 'input',
+        name: 'name',
+        message: 'What is the name of the Intern?'
+    },
+    {
+        type: 'input',
+        name: 'internId',
+        message: 'What is the Intern ID number?',
+    },
+    {
+        type: 'input',
+        name: 'internEmail',
+        message: 'what is the email address of the Intern?',
+    },
+    {
+        type: 'input',
+        name: 'internSchool',
+        message: 'Provide the school attended by the Intern.',
+    },
+]).then((answers)=>{
+    const intern = new Intern(
+        answers.name,
+        answers.internId,
+        answers.internEmail,
+        answers.internSchool
+    )
+    teamArray.push(intern);
+    createTeam();
+  //  console.log("new instance of manager", manager)
+   // console.log("this is whats in our team array", teamArray)
+})
+}
     function createTeam(){
         inquirer.prompt([
             {
@@ -110,17 +134,14 @@ const managerQuestions = () => {
                     managerQuestions();
                     break;
                 case "Engineer":
-                    // fire off enginerQuestions();
+                    engineerQuestions();
                     break;
                 case "Intern":
-                    // fire off internQuestions();
+                    internQuestions();
                     break;
                 default:
-                buildTeam();
-                
-                
+                buildTeam();                
             }
-
         })
     }
 
