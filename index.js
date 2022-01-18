@@ -10,7 +10,7 @@ const teamArray = [];
 const DIST_DIRECTORY = path.resolve(__dirname, "dist");
 const distPath = path.join(DIST_DIRECTORY, "index.html")
 
-const render = require("./source/generateProfile");
+const render = require("./source/generateTeamProfile");
 
 function mainMenu(){
 // Questions for user input

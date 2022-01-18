@@ -1,0 +1,48 @@
+body, html {
+    height: 100%;    
+    background-color: lavenderblush
+}
+.jumbotron {
+    font-size: 40px;
+    color: indigo;
+    background-color: violet;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 0px;
+    font-family: cursive;
+    font-style: oblique;
+    height: 35px;
+}
+.column {
+    max-width: 30%;
+    margin: auto;
+}
+.col {
+    margin: auto;
+    max-width: 40%;
+}
+ .card {
+    background-color: lightpink;
+}
+.card-body {
+    margin: auto;
+}
+.card-title {
+    font-size: 35px;
+    color: crimson;
+    text-align: center;
+    font-family: Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.nameDetail {
+    font-weight: bold;
+    font-size: 22px;
+}
+.contactDetails {
+    font-style: italic;
+    font-weight: bold;
+}
+li {
+    display: flex;
+   
+}
