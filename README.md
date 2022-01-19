@@ -25,3 +25,4 @@ I can be reached at sandora375@outlook.com
 https://drive.google.com/file/d/1dEDpBGNnNXvHaBFVTxDbcanhtf3-adiE/view?usp=sharing
 
 ## Screenshot
+![worksquad generator screenshot](https://user-images.githubusercontent.com/93016627/150056642-82d02a6f-0d46-472d-8779-c311efe40bce.png)
