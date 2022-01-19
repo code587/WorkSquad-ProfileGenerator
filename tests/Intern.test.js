@@ -11,7 +11,7 @@ describe('Intern', () => {
             const testIntern = new Intern('Harley Quinn', 1, 'HarleyQ123@gmail.com', 'Crinkle University');
 
             //Assert
-            expect(testIntern.School).toBe('Crinkle University')
+            expect(testIntern.school).toBe('Crinkle University')
         });
     });
 
