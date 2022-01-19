@@ -22,6 +22,6 @@ Jest
 I can be reached at sandora375@outlook.com
 
 ## Links
-https://drive.google.com/file/d/1dEDpBGNnNXvHaBFVTxDbcanhtf3-adiE/view?usp=sharing 
+https://drive.google.com/file/d/1dEDpBGNnNXvHaBFVTxDbcanhtf3-adiE/view?usp=sharing
 
 ## Screenshot
