@@ -6,8 +6,7 @@ describe('Engineer', () => {
     describe('instantiation', () => {
 
         it('should pass and instantiate object correctly ', () => {
-            //Arrange
-            //Act
+            //Arrange&Act
             const testEngineer = new Engineer('Harley Quinn', 1, 'HarleyQ123@gmail.com', 'HarleyQ');
 
             //Assert

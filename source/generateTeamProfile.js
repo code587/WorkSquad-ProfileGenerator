@@ -1,14 +1,14 @@
 const generateTeamProfile = team => {
 
 console.log("TEAM FROM INDEX.js", team)
-// break each type of employee into bootstrap cards and use back ticks ` and ${engineer.getGitHub()}`
+//bootstrap card layout for the manager, engineer and intern role
 const generateManager = (manager)=>{
   return `
   <div class="jumbotron jumbotron-fluid">Software Engineering Team</div>
     <div class="column">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title">Manager</h2>
+          <h2 class="card-title">Manager  📋</h2>
             <ul></ul>
               <li class="nameDetail">Name: ${manager.getName()}</li>
               <li class="contactDetails">ID: ${manager.getId()}</li>
@@ -58,7 +58,7 @@ const generateIntern = (intern)=>{
 }
 
   const html = [];
-
+//filters the role to prompt questions for the appropriate role and push it to the html
   html.push(team.filter(employee => employee.getRole() === "Manager").map(manager => generateManager(manager)));
 
   html.push(team.filter(employee => employee.getRole() === "Engineer").map(engineer => generateEngineer(engineer)).join(""));
@@ -84,5 +84,5 @@ module.exports = team => {
 ${generateTeamProfile(team)};
 </body>
 </html>
-  `
+  `;
 }

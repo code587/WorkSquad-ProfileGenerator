@@ -13,7 +13,7 @@ const distPath = path.join(DIST_DIRECTORY, "index.html")
 const render = require("./source/generateTeamProfile");
 
 function mainMenu(){
-// Questions for user input
+// Questions for user input to construct team
 const managerQuestions = () => {
     return inquirer.prompt([
     {
@@ -45,8 +45,6 @@ const managerQuestions = () => {
     )
     teamArray.push(manager);
     createTeam();
-  //  console.log("new instance of manager", manager)
-   // console.log("this is whats in our team array", teamArray)
 })
 }
 const engineerQuestions = () => {
@@ -80,8 +78,7 @@ const engineerQuestions = () => {
     )
     teamArray.push(engineer);
     createTeam();
-  //  console.log("new instance of manager", manager)
-   // console.log("this is whats in our team array", teamArray)
+
 })
 }
 const internQuestions = () => {
@@ -115,8 +112,7 @@ const internQuestions = () => {
     )
     teamArray.push(intern);
     createTeam();
-  //  console.log("new instance of manager", manager)
-   // console.log("this is whats in our team array", teamArray)
+
 })
 }
     function createTeam(){
@@ -128,7 +124,7 @@ const internQuestions = () => {
                 choices: ['Manager', 'Engineer', 'Intern', "I dont want to add anymore team members"] 
             },
         ]).then((answer)=>{
-
+            //matches the value of the role picked when command line questions answered and goes to the appropriate case and executes that statement
             switch(answer.Employee){
                 case "Manager":
                     managerQuestions();
@@ -146,6 +142,7 @@ const internQuestions = () => {
     }
 
     function buildTeam(){
+    //if the dist_directory file doesn't exist, make a file and write to the file.
         if(!fs.existsSync(DIST_DIRECTORY)){
             fs.mkdirSync(DIST_DIRECTORY)
         }
@@ -156,13 +153,3 @@ const internQuestions = () => {
 }
 
 mainMenu();
-
-
-
-// const init = () => {
-//     managerQuestions()
-// //       // Use writeFileSync method to use promises instead of a callback function
-//       .then((userAnswers) => fs.writeFileSync('index.html', generateProfile(userAnswers)))
-//       .then(() => console.log('Successfully wrote to index.html'))
-//       .catch((err) => console.error(err));
-//   };
